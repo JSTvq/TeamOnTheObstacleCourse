@@ -1,4 +1,4 @@
-package com.kir138;
+package com.kir138.team;
 
 public interface Participant {
     void run(int distance);

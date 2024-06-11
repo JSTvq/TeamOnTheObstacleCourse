@@ -1,7 +1,7 @@
-package com.kir138;
+package com.kir138.team;
 
 public class Human implements Participant {
-    String name;
+    private String name;
     private int maxRunDistance;
     private int maxJumpHeight;
     private int maxSwimDistance;
@@ -15,27 +15,32 @@ public class Human implements Participant {
         this.res = true;
     }
 
-    public void reset() {
-        res = true;
+
+    public boolean resetAll() {
+        return res;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
     public void run(int distance) {
-        if (distance >= maxRunDistance) {
+        if (distance > maxRunDistance) {
             res = false;
         }
     }
 
     @Override
     public void swim(int distance) {
-        if (distance >= maxSwimDistance) {
+        if (distance > maxSwimDistance) {
             res = false;
         }
     }
 
     @Override
     public void jump(int height) {
-        if (height >= maxJumpHeight) {
+        if (height > maxJumpHeight) {
             res = false;
         }
     }

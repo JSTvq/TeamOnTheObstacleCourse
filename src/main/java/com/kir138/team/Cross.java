@@ -1,4 +1,4 @@
-package com.kir138;
+package com.kir138.team;
 
 public class Cross extends Obstacle {
     private final int distance;
