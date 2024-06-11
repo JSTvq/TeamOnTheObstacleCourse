@@ -26,6 +26,9 @@ public class App {
                 new Human("Геннадий2",17, 11, 13),
                 new Human("Артур",6, 2, 2),
                 new Human("Марина", 8, 2, 1));
+                
+        course.doIt(team);
+        team.showAllMembersTeam();
 
         team.showAll();
         course.doIt(team);
