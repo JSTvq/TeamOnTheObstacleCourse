@@ -28,10 +28,7 @@ public class App {
                 new Human("Марина", 8, 2, 1));
                 
         course.doIt(team);
-        team.showAllMembersTeam();
-
         team.showAll();
-        course.doIt(team);
         team.showAllMembersTeam();
 
 
