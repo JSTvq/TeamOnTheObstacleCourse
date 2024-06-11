@@ -24,8 +24,8 @@ public class Team {
     }
 
     //метод вывода информации обо всех членах команды
-    StringBuilder sb = new StringBuilder();
     public void showAll() {
+        StringBuilder sb = new StringBuilder();
         for (Participant participant : members) {
             Human human = (Human) participant;
             sb.append(human.getName()).append(", ");
