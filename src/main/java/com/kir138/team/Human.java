@@ -5,19 +5,18 @@ public class Human implements Participant {
     private int maxRunDistance;
     private int maxJumpHeight;
     private int maxSwimDistance;
-    private boolean res;
+    private boolean isSuccessful;
 
     public Human(String name, int maxRunDistance, int maxJumpHeight, int maxSwimDistance) {
         this.name = name;
         this.maxRunDistance = maxRunDistance;
         this.maxJumpHeight = maxJumpHeight;
         this.maxSwimDistance = maxSwimDistance;
-        this.res = true;
+        this.isSuccessful = true;
     }
 
-
     public boolean resetAll() {
-        return res;
+        return isSuccessful;
     }
 
     public String getName() {
@@ -27,21 +26,21 @@ public class Human implements Participant {
     @Override
     public void run(int distance) {
         if (distance > maxRunDistance) {
-            res = false;
+            isSuccessful = false;
         }
     }
 
     @Override
     public void swim(int distance) {
         if (distance > maxSwimDistance) {
-            res = false;
+            isSuccessful = false;
         }
     }
 
     @Override
     public void jump(int height) {
         if (height > maxJumpHeight) {
-            res = false;
+            isSuccessful = false;
         }
     }
 }

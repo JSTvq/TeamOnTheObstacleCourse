@@ -14,7 +14,7 @@ public class Team {
     }
 
     //метод для вывода информации о членах команды, прошедших дистанцию
-    public void showAllMembersTeam() {
+    public void showResults() {
         for (Participant participant : members) {
             Human human = (Human) participant;
             if (human.resetAll()) {
@@ -24,8 +24,8 @@ public class Team {
     }
 
     //метод вывода информации обо всех членах команды
-    StringBuilder sb = new StringBuilder();
     public void showAll() {
+        StringBuilder sb = new StringBuilder();
         for (Participant participant : members) {
             Human human = (Human) participant;
             sb.append(human.getName()).append(", ");

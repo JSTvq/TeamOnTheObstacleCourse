@@ -7,7 +7,7 @@ public class Course {
         this.obstacles = obstacles;
     }
 
-    //метод, который будет просить команду пройти всю полосу
+    //запуск полосы препятствий
     public void doIt(Team team) {
         for (Participant participant : team.showMass()) {
             for (Obstacle obstacle : obstacles) {
