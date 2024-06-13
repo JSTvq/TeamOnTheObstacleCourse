@@ -1,5 +1,5 @@
 package com.kir138.team;
 
-public abstract class Obstacle {
-    public abstract void doIt(Participant competitor);
+public interface Obstacle {
+    void doIt(Participant competitor);
 }

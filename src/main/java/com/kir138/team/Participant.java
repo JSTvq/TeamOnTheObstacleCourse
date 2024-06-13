@@ -1,12 +1,30 @@
 package com.kir138.team;
 
-public interface Participant {
-    void run(int distance);
+public abstract class Participant {
 
-    void swim(int distance);
+    protected final String name;
+    protected final int maxRunDistance;
+    protected final int maxJumpHeight;
+    protected final int maxSwimDistance;
 
-    void jump(int height);
+    public Participant(String name,
+                       int maxRunDistance,
+                       int maxJumpHeight,
+                       int maxSwimDistance) {
+        this.name = name;
+        this.maxRunDistance = maxRunDistance;
+        this.maxJumpHeight = maxJumpHeight;
+        this.maxSwimDistance = maxSwimDistance;
+    }
 
+    abstract void run(int distance);
 
+    abstract void swim(int distance);
+
+    abstract void jump(int height);
+
+    abstract boolean getIsSuccessful();
+
+    abstract String getName();
 
 }

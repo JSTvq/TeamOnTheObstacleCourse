@@ -1,6 +1,6 @@
 package com.kir138.team;
 
-public class Cross extends Obstacle {
+public class Cross implements Obstacle {
     private final int distance;
 
     public Cross(final int distance) {

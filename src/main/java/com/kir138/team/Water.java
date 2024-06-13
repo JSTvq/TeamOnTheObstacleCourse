@@ -1,9 +1,6 @@
 package com.kir138.team;
 
-import com.kir138.team.Obstacle;
-import com.kir138.team.Participant;
-
-public class Water extends Obstacle {
+public class Water implements Obstacle {
     private final int distance;
 
     public Water(int distance) {

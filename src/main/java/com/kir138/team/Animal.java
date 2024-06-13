@@ -1,15 +1,16 @@
 package com.kir138.team;
 
-public class Human extends Participant {
+public class Animal extends Participant {
     private boolean isSuccessful;
 
-    public Human(String name,
-                 int maxRunDistance,
-                 int maxJumpHeight,
-                 int maxSwimDistance) {
+    public Animal(String name,
+                  int maxRunDistance,
+                  int maxJumpHeight,
+                  int maxSwimDistance) {
         super(name, maxRunDistance, maxJumpHeight, maxSwimDistance);
         this.isSuccessful = true;
     }
+
 
     @Override
     public boolean getIsSuccessful() {

@@ -1,47 +1,36 @@
 package com.kir138.team;
 
-import com.kir138.team.Participant;
-
 import java.util.Arrays;
 
 public class Team {
-    private String nameTeam;
-    private Participant[] members;
+    private final String nameTeam;
+    private final Participant[] participants;
 
-    public Team(String nameTeam, Participant...members) {
+    public Team(String nameTeam, Participant... participants) {
         this.nameTeam = nameTeam;
-        this.members = members;
+        this.participants = participants;
     }
 
     //метод для вывода информации о членах команды, прошедших дистанцию
     public void showResults() {
-        for (Participant participant : members) {
-            Human human = (Human) participant;
-            if (human.resetAll()) {
-                System.out.println(human.getName());
+        for (Participant participant : participants) {
+            if (participant.getIsSuccessful()) {
+                System.out.println(participant.getName() + " : winner");
+            } else {
+                System.out.println(participant.getName() + " : looser");
             }
         }
     }
 
-    //метод вывода информации обо всех членах команды
-    public void showAll() {
-        StringBuilder sb = new StringBuilder();
-        for (Participant participant : members) {
-            Human human = (Human) participant;
-            sb.append(human.getName()).append(", ");
-        }
-        System.out.println("Состав команды: " + sb);
-    }
-
-    public Participant[] showMass() {
-        return members;
+    public Participant[] getParticipants() {
+        return participants;
     }
 
     @Override
     public String toString() {
         return "Team{" +
                 "nameTeam='" + nameTeam + '\'' +
-                ", members=" + Arrays.toString(members) +
+                ", members=" + Arrays.toString(participants) +
                 '}';
     }
 }

@@ -1,9 +1,6 @@
 package com.kir138.team;
 
-import com.kir138.team.Obstacle;
-import com.kir138.team.Participant;
-
-public class Wall extends Obstacle {
+public class Wall implements Obstacle {
     private final int height;
 
     public Wall(final int height) {

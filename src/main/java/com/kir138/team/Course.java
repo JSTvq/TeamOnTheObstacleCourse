@@ -1,20 +1,21 @@
 package com.kir138.team;
 
 public class Course {
-    private Obstacle[] obstacles;
+    private final Obstacle[] obstacles;
 
-    public Course(Obstacle...obstacles) {
+    public Course(Obstacle... obstacles) {
         this.obstacles = obstacles;
     }
 
-    //запуск полосы препятствий
+    /**
+     * Запуск полосы препятствий
+     *
+     * @param team - команда
+     */
     public void doIt(Team team) {
-        for (Participant participant : team.showMass()) {
+        for (Participant participant : team.getParticipants()) {
             for (Obstacle obstacle : obstacles) {
                 obstacle.doIt(participant);
-                if (!((Human)participant).resetAll()) {
-                    break;
-                }
             }
         }
     }
