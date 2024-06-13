@@ -1,4 +1,4 @@
-package com.kir138.team;
+package com.kir138.team.oop;
 
 public class Wall implements Obstacle {
     private final int height;
